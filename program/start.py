@@ -52,32 +52,38 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""✨ **Welcome {message.from_user.mention()} !**\n
-💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Allows you to play music and video on groups through the new Telegram's video chats!**
+        f"""✨𝐇𝐚𝐥𝐨!,
+𝐒𝐚𝐲𝐚 𝐀𝐝𝐚𝐥𝐚𝐡 𝐁𝐨𝐭 𝐗𝐭𝐚𝐚𝐧𝐣𝐤𝐧𝐭𝐥 𝐘𝐚𝐧𝐠 𝐋𝐚𝐦𝐚 𝐒𝐮𝐝𝐚𝐡 𝐑𝐞𝐡𝐚𝐭 𝐃𝐚𝐧 𝐒𝐞𝐤𝐚𝐫𝐚𝐧𝐠 𝐁𝐚𝐫𝐮 𝐁𝐢𝐬𝐚 𝐊𝐞𝐦𝐛𝐚𝐥𝐢 𝐃𝐞𝐧𝐠𝐚𝐧 𝐍𝐚𝐦𝐚 𝐁𝐚𝐫𝐮 ( xᴛᴀᴀɴᴊᴋɴᴛʟ ʀᴇʙᴏʀɴ ) , 𝐃𝐞𝐧𝐠𝐚𝐧 𝐅𝐢𝐭𝐮𝐫 𝐃𝐚𝐧 𝐕𝐞𝐫𝐬𝐢 𝐓𝐞𝐫𝐛𝐚𝐫𝐮 𝐉𝐮𝐠𝐚.
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+• 𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐕𝐢𝐝𝐞𝐨 𝐀𝐧𝐝 𝐌𝐮𝐬𝐢𝐜
+• 𝐋𝐚𝐬𝐭 𝐕𝐞𝐫𝐬𝐢𝐨𝐧 
+• 𝐅𝐫𝐞𝐞 𝐀𝐝𝐝 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩𝐬 
+➖➖➖➖➖➖➖➖➖➖➖➖➖
 
-💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
+❃ 𝐌𝐚𝐧𝐚𝐠𝐞𝐝 𝐖𝐢𝐭𝐡 𝐁𝐲 [𝐗𝐓𝐀](t.me/xtaaaanj)
+❃ 𝐓𝐡𝐚𝐧𝐤'𝐬 𝐓𝐨 [ʟᴇᴠɪɴᴀ-x](t.me/dlwrml)
 
-🔖 **To know how to use this bot, please click on the » ❓ Basic Guide button!**
+➥ 𝐓𝐞𝐤𝐚𝐧 𝐓𝐨𝐦𝐛𝐨𝐥 𝐃𝐢 𝐁𝐚𝐰𝐚𝐡 𝐔𝐧𝐭𝐮𝐤 𝐌𝐞𝐧𝐠𝐞𝐭𝐚𝐡𝐮𝐢 𝐅𝐢𝐭𝐮𝐫 𝐋𝐞𝐧𝐠𝐤𝐚𝐩 𝐃𝐚𝐫𝐢 𝐗𝐭𝐚𝐚𝐧𝐣𝐤𝐧𝐭𝐥 𝐑𝐞𝐛𝐨𝐫𝐧 𝐁𝐨𝐭
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕",
+                        "➕ Tambahkan Saya Kedalam Grup Anda ➕",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("❓ Cara Menggunakan Bot", callback_data="cbhowtouse")],
                 [
                     InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
-                    InlineKeyboardButton("❤️ Donate", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("🏧 Donasi", url=f"https://t.me/xtaaaanj"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "👥 Group", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣 Channel", url=f"https://t.me/ikylvyuuu"
                     ),
                 ],
                 [
@@ -104,7 +110,7 @@ async def alive(client: Client, message: Message):
             [
                 InlineKeyboardButton("✨ Group", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "📣 Channel", url=f"https://t.me/ikylvyuuu"
                 ),
             ]
         ]
