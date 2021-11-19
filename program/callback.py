@@ -16,24 +16,30 @@ from config import (
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""✨ **Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) allows you to play music and video on groups through the new Telegram's video chats!**
+        f"""✨𝐇𝐚𝐥𝐨!, [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
+𝐒𝐚𝐲𝐚 𝐀𝐝𝐚𝐥𝐚𝐡 𝐁𝐨𝐭 𝐗𝐭𝐚𝐚𝐧𝐣𝐤𝐧𝐭𝐥 𝐘𝐚𝐧𝐠 𝐋𝐚𝐦𝐚 𝐒𝐮𝐝𝐚𝐡 𝐑𝐞𝐡𝐚𝐭 𝐃𝐚𝐧 𝐒𝐞𝐤𝐚𝐫𝐚𝐧𝐠 𝐁𝐚𝐫𝐮 𝐁𝐢𝐬𝐚 𝐊𝐞𝐦𝐛𝐚𝐥𝐢 𝐃𝐞𝐧𝐠𝐚𝐧 𝐍𝐚𝐦𝐚 𝐁𝐚𝐫𝐮 ( xᴛᴀᴀɴᴊᴋɴᴛʟ ʀᴇʙᴏʀɴ ) , 𝐃𝐞𝐧𝐠𝐚𝐧 𝐅𝐢𝐭𝐮𝐫 𝐃𝐚𝐧 𝐕𝐞𝐫𝐬𝐢 𝐓𝐞𝐫𝐛𝐚𝐫𝐮 𝐉𝐮𝐠𝐚.
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+• 𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐕𝐢𝐝𝐞𝐨 𝐀𝐧𝐝 𝐌𝐮𝐬𝐢𝐜
+• 𝐋𝐚𝐬𝐭 𝐕𝐞𝐫𝐬𝐢𝐨𝐧 
+• 𝐅𝐫𝐞𝐞 𝐀𝐝𝐝 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩𝐬 
+➖➖➖➖➖➖➖➖➖➖➖➖➖
 
-💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
+❃ 𝐌𝐚𝐧𝐚𝐠𝐞𝐝 𝐖𝐢𝐭𝐡 𝐁𝐲 𝐗𝐓𝐀
+❃ 𝐓𝐡𝐚𝐧𝐤'𝐬 𝐓𝐨 ʟᴇᴠɪɴᴀ-x
 
-🔖 **To know how to use this bot, please click on the » ❓ Basic Guide button!**""",
+➥ 𝐓𝐞𝐤𝐚𝐧 𝐓𝐨𝐦𝐛𝐨𝐥 𝐃𝐢 𝐁𝐚𝐰𝐚𝐡 𝐔𝐧𝐭𝐮𝐤 𝐌𝐞𝐧𝐠𝐞𝐭𝐚𝐡𝐮𝐢 𝐅𝐢𝐭𝐮𝐫 𝐋𝐞𝐧𝐠𝐤𝐚𝐩 𝐃𝐚𝐫𝐢 𝐗𝐭𝐚𝐚𝐧𝐣𝐤𝐧𝐭𝐥 𝐑𝐞𝐛𝐨𝐫𝐧 𝐁𝐨𝐭""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕",
+                        "➕ Tambakan Kedalam Grup Anda ➕",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("❓ Panduan Perintah", callback_data="cbhowtouse")],
                 [
-                    InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
-                    InlineKeyboardButton("❤ Donate", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("📚 Perintah", callback_data="cbcmds"),
+                    InlineKeyboardButton("❤ Donasi", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
@@ -57,18 +63,18 @@ async def cbstart(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbhowtouse"))
 async def cbguides(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""❓ **Basic Guide for using this bot:**
+        f"""❓ Panduan Dasar untuk menggunakan bot ini:
 
-1.) **First, add me to your group.**
-2.) **Then, promote me as administrator and give all permissions except Anonymous Admin.**
-3.) **After promoting me, type /reload in group to refresh the admin data.**
-3.) **Add @{ASSISTANT_NAME} to your group or type /userbotjoin to invite her.**
-4.) **Turn on the video chat first before start to play video/music.**
-5.) **Sometimes, reloading the bot by using /reload command can help you to fix some problem.**
+1.) Pertama, tambahkan saya ke grup Anda.
+2.) Kemudian, promosikan saya sebagai administrator dan berikan semua izin kecuali Admin Anonim.
+3.) Setelah mempromosikan saya, ketik /reload di grup untuk menyegarkan data admin.
+3.) Tambahkan @xtaanjkntlasisten ke grup Anda atau ketik /userbotjoin untuk mengundangnya.
+4.) Nyalakan obrolan video terlebih dahulu sebelum mulai memutar video/musik.
+5.) Terkadang, memuat ulang bot dengan menggunakan perintah /reload dapat membantu Anda memperbaiki beberapa masalah.
 
-📌 **If the userbot not joined to video chat, make sure if the video chat already turned on, or type /userbotleave then type /userbotjoin again.**
+📌: Jika userbot tidak bergabung ke video chat, pastikan jika video chat sudah aktif, atau ketik /userbotleave lalu ketik /userbotjoin lagi.
 
-💡 **If you have a follow-up questions about this bot, you can tell it on my support chat here: @{GROUP_SUPPORT}**
+💡: Jika Anda memiliki pertanyaan lanjutan tentang bot ini, Anda dapat menceritakannya di obrolan dukungan saya di sini: @XtaanjkntlReborn
 
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -80,18 +86,18 @@ async def cbguides(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbcmds"))
 async def cbcmds(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""✨ **Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
+        f"""✨ **Hallo [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
 
-» **press the button below to read the explanation and see the list of available commands !**
+» **tekan tombol di bawah untuk membaca penjelasan dan melihat daftar perintah yang tersedia!**
 
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👷🏻 Admin Cmd", callback_data="cbadmin"),
-                    InlineKeyboardButton("🧙🏻 Sudo Cmd", callback_data="cbsudo"),
+                    InlineKeyboardButton("👷🏻 Perintah Admin", callback_data="cbadmin"),
+                    InlineKeyboardButton("🧙🏻 Perintah Sudo", callback_data="cbsudo"),
                 ],[
-                    InlineKeyboardButton("📚 Basic Cmd", callback_data="cbbasic")
+                    InlineKeyboardButton("📚 Perintah Dasar", callback_data="cbbasic")
                 ],[
                     InlineKeyboardButton("🔙 Go Back", callback_data="cbstart")
                 ],
@@ -103,21 +109,21 @@ async def cbcmds(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbbasic"))
 async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 here is the basic commands:
+        f"""🏮 : berikut adalah perintah dasarnya:
 
-» /play (song name/link) - play music on video chat
-» /stream (query/link) - stream the yt live/radio live music
-» /vplay (video name/link) - play video on video chat
-» /vstream - play live video from yt live/m3u8
-» /playlist - show you the playlist
-» /video (query) - download video from youtube
-» /song (query) - download song from youtube
-» /lyric (query) - scrap the song lyric
-» /search (query) - search a youtube video link
+» /mplay (nama lagu/tautan) - putar musik di obrolan video
+» /stream (query/link) - streaming yt live/radio live music
+» /vplay (nama video/tautan) - putar video di obrolan video
+» /vstream - putar video langsung dari yt live/m3u8
+» /playlist - menampilkan daftar putar
+» /video (permintaan) - unduh video dari youtube
+» /song (query) - download lagu dari youtube
+» /lyric (query) - memo lirik lagu
+» /search (query) - cari link video youtube
 
-» /ping - show the bot ping status
-» /uptime - show the bot uptime status
-» /alive - show the bot alive info (in group)
+» /ping - tampilkan status bot ping
+» /uptime - tampilkan status uptime bot
+» /alive - tampilkan info bot hidup (dalam grup)
 
 ⚡️ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
@@ -129,18 +135,18 @@ async def cbbasic(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbadmin"))
 async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 here is the admin commands:
+        f"""🏮: berikut adalah perintah admin:
 
-» /pause - pause the stream
-» /resume - resume the stream
-» /skip - switch to next stream
-» /stop - stop the streaming
-» /vmute - mute the userbot on voice chat
-» /vunmute - unmute the userbot on voice chat
-» /volume `1-200` - adjust the volume of music (userbot must be admin)
-» /reload - reload bot and refresh the admin data
-» /userbotjoin - invite the userbot to join group
-» /userbotleave - order userbot to leave from group
+» /pause - jeda streaming
+» /resume - lanjutkan streaming
+» /skip - beralih ke aliran berikutnya
+» /stop - hentikan streaming
+» /vmute - bisukan bot pengguna di obrolan suara
+» /vunmute - mengaktifkan suara bot pengguna di obrolan suara
+» /volume 1-200 - mengatur volume musik (userbot harus admin)
+» /reload - reload bot dan refresh data admin
+» /userbotjoin - undang userbot untuk bergabung dengan grup
+» /userbotleave - perintahkan userbot keluar dari grup
 
 ⚡️ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
@@ -151,14 +157,14 @@ async def cbadmin(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsudo"))
 async def cbsudo(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 here is the sudo commands:
+        f"""🏮: ini perintah sudo:
 
-» /rmw - clean all raw files
-» /rmd - clean all downloaded files
-» /sysinfo - show the system information
-» /update - update your bot to latest version
-» /restart - restart your bot
-» /leaveall - order userbot to leave from all group
+» /rmw - bersihkan semua file mentah
+» /rmd - bersihkan semua file yang diunduh
+» /sysinfo - menampilkan informasi sistem
+» /update - perbarui bot Anda ke versi terbaru
+» /restart - mulai ulang bot Anda
+» /leaveall - perintahkan userbot keluar dari semua grup
 
 ⚡ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
